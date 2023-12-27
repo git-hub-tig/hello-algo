@@ -15,8 +15,8 @@ def coin_change_dp(coins: list[int], amt: int) -> int:
     for a in range(1, amt + 1):
         dp[0][a] = MAX
     # 状态转移：其余行和列
-    for i in range(1, n + 1):
-        for a in range(1, amt + 1):
+    for i in range(1, n + 1): # choice
+        for a in range(1, amt + 1): # target
             if coins[i - 1] > a:
                 # 若超过目标金额，则不选硬币 i
                 dp[i][a] = dp[i - 1][a]

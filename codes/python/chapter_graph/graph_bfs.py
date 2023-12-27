@@ -7,7 +7,7 @@ Author: Krahets (krahets@163.com)
 import sys
 from pathlib import Path
 
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent.parent)) # wqs, otherwise, ModuleNotFoundError: No module named 'modules'
 from modules import Vertex, vals_to_vets, vets_to_vals
 from collections import deque
 from graph_adjacency_list import GraphAdjList

@@ -28,6 +28,14 @@ def binary_search_lcro(nums: list[int], target: int) -> int:
     i, j = 0, len(nums)
     # 循环，当搜索区间为空时跳出（当 i = j 时为空）
     while i < j:
+        """
+        wqs, differ with c or c++ default behavior
+        >>> (3+6)/2
+        4.5
+        >>> (3+6)//2
+        4
+        >>>
+        """
         m = (i + j) // 2  # 计算中点索引 m
         if nums[m] < target:
             i = m + 1  # 此情况说明 target 在区间 [m+1, j) 中

@@ -22,7 +22,7 @@ def two_sum_hash_table(nums: list[int], target: int) -> list[int]:
     # 单层循环，时间复杂度为 O(n)
     for i in range(len(nums)):
         if target - nums[i] in dic:
-            return [dic[target - nums[i]], i]
+            return [dic[target - nums[i]], i] # wqs, return index pair
         dic[nums[i]] = i
     return []
 
@@ -31,6 +31,7 @@ def two_sum_hash_table(nums: list[int], target: int) -> list[int]:
 if __name__ == "__main__":
     # ======= Test Case =======
     nums = [2, 7, 11, 15]
+
     target = 13
 
     # ====== Driver Code ======
